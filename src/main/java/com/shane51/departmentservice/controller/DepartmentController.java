@@ -3,15 +3,16 @@ package com.shane51.departmentservice.controller;
 import com.shane51.departmentservice.client.EmployeeClient;
 import com.shane51.departmentservice.model.Department;
 import com.shane51.departmentservice.repository.DepartmentRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class DepartmentController {
+    @Autowired
     private DepartmentRepository repository;
+    @Autowired
     private EmployeeClient employeeClient;
 
     @PostMapping("/")
