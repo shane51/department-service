@@ -29,6 +29,7 @@ ext {
 }
 
 dependencies {
+    implementation('org.springframework.cloud:spring-cloud-starter-config')
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
     // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
